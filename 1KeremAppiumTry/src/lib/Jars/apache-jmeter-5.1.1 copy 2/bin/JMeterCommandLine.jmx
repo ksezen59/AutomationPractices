@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1572345977976,2708,HTTP Request,200,OK,CmdThreadGroup 1-1,text,true,,235153,234,1,1,https://www.mynet.com/,560,0,347
+1572345977976,560,HTTP Request-0,301,Moved permanently,CmdThreadGroup 1-1,,true,,130,117,1,1,http://www.mynet.com/,560,0,347
+1572345978539,2145,HTTP Request-1,200,OK,CmdThreadGroup 1-1,text,true,,235023,117,1,1,https://www.mynet.com/,809,0,587

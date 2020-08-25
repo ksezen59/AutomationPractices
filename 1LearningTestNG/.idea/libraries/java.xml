@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="java">
+    <CLASSES>
+      <root url="file:///Applications/AppiumStudio/clients/appium/java" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar:///Applications/AppiumStudio/clients/appium/java/appium-seetest-extension-12.8-javadoc.zip!/" />
+    </JAVADOC>
+    <SOURCES />
+    <jarDirectory url="file:///Applications/AppiumStudio/clients/appium/java" recursive="false" />
+  </library>
+</component>

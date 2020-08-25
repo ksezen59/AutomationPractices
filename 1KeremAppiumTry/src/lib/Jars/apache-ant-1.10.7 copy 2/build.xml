@@ -1,0 +1,5 @@
+<project default="print-version">
+    <target name="print-version">
+        <echo>${ant.version}</echo>
+    </target>
+</project>

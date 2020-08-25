@@ -1,0 +1,53 @@
+line 102 column 53 - Warning: Warning: unescaped & or unknown entity "&l"
+line 126 column 223 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 224 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 457 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 458 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 608 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 608 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 608 - Warning: <n> attribute "t++)e[t].id" has invalid value "e[t].id.replace(/medyanet\/(28687765|9927946)/,"medyanet/"+a[i])}();var"
+line 126 column 608 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 608 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 608 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 608 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 870 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 871 - Warning: Warning: unescaped & or unknown entity "&void"
+line 126 column 871 - Warning: <n> attribute "0!" has invalid value "=Medyanet_Settings.BlueKai&&void"
+line 126 column 871 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 871 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 871 - Warning: <n> attribute "0!" has invalid value "=dataLayer[0].content.type}catch(e){return!1}},function(){Medyanet_Settings.BlueKai.PageType3=dataLayer[0].content.type}),"undefined"==typeof"
+line 126 column 871 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 871 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 871 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 871 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 1,371 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 1,372 - Warning: Warning: unescaped & or unknown entity "&-1"
+line 126 column 1,372 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 1,372 - Warning: <n> unexpected or duplicate quote mark
+line 126 column 1,372 - Error: <n> missing '>' for end of tag
+line 126 column 1,372 - Warning: <n> attribute "mynetReady?o.addEventListener("DOMContentLoaded",function(){n()}):mynetReady(function(){n()}),a.googletag" has invalid value "a.googletag||{},a.googletag.cmd=a.googletag.cmd||[],a.pageskin_counter=0,a.googletag.cmd.push(function(){a.googletag.pubads().addEventListener("slotRenderEnded",function(e){!e.isEmpty||-1===e.slot.getAdUnitPath().indexOf("Pageskin_BannerLeft")&&-1===e.slot.getAdUnitPath().indexOf("Pageskin_BannerRight")||(0"
+line 126 column 1,437 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,437 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,595 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 1,596 - Warning: Warning: unescaped & or unknown entity "&o.querySelector"
+line 126 column 1,596 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,596 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,596 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,596 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,596 - Warning: <a.pageskin_counter> attribute "&o.querySelector("body").classList.add("no-pageskin"),a.pageskin_counter++),e.isEmpty&&-1!" has invalid value "=e.slot.getAdUnitPath().indexOf("pageskin-sag")&&o.querySelector("body").classList.add("no-left-docked")});var"
+line 126 column 1,596 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,596 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,677 - Warning: Warning: unescaped & which should be written as &amp;
+line 126 column 1,678 - Warning: Warning: unescaped & or unknown entity "&a.googletag.pubads"
+line 126 column 1,678 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,678 - Warning: <a.pageskin_counter> unexpected or duplicate quote mark
+line 126 column 1,678 - Error: <a.pageskin_counter> missing '>' for end of tag
+line 127 column 10 - Error: unexpected </script> in <a.pageskin_counter>
+line 142 column 27 - Warning: Warning: unescaped & which should be written as &amp;
+line 142 column 28 - Warning: Warning: unescaped & which should be written as &amp;
+line 145 column 1 - Error: unexpected </head> in <a.pageskin_counter>
+line 339 column 9 - Error: unexpected </a> in <img>
+line 340 column 5 - Error: unexpected </div> in <img>
+433 warnings, 87 errors were found!
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.

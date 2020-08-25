@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_learningtestng" default="compile.module.learningtestng">
+  <dirname property="module.learningtestng.basedir" file="${ant.file.module_learningtestng}"/>
+  
+  <property name="module.jdk.home.learningtestng" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.learningtestng" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.learningtestng" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.learningtestng" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="learningtestng.output.dir" value="${module.learningtestng.basedir}/out/production/LearningTestNG"/>
+  <property name="learningtestng.testoutput.dir" value="${module.learningtestng.basedir}/out/test/LearningTestNG"/>
+  
+  <path id="learningtestng.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="learningtestng.module.production.classpath">
+    <path refid="${module.jdk.classpath.learningtestng}"/>
+    <path refid="library.client-combined-3.141.59.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/client-combined-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/byte-buddy-1.8.15.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/guava-25.0-jre.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okhttp-3.11.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okio-1.14.0.jar"/>
+    <pathelement location="${path.variable.maven_repository}/junit/junit/4.12/junit-4.12.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/gson-2.8.5.jar"/>
+    <path refid="library.junit.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/apiguardian-api-1.0.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/appium-seetest-extension-12.8.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/aspectjweaver-1.8.9.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cglib-nodep-3.2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-beanutils-1.9.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-collections-3.2.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-digester-1.8.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-lang3-3.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-validator-1.5.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cssparser-0.9.18.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/gson-2.7.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/guava-19.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-core-js-2.17.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-driver-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpclient-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpcore-4.4.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpmime-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/java-client-4.1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jcommander-1.48.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-io-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-util-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-platform-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-api-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-engine-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-commons-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-engine-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/neko-htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/netty-3.5.7.Final.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/opentest4j-1.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/sac-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-api-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-chrome-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-edge-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-firefox-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-ie-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-leg-rc-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-remote-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-safari-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-support-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/serializer-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-aop-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-beans-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-context-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-core-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-expression-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/testng-6.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-api-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-client-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-common-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xalan-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xercesImpl-2.11.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xml-apis-1.4.01.jar"/>
+  </path>
+  
+  <path id="learningtestng.runtime.production.module.classpath">
+    <pathelement location="${learningtestng.output.dir}"/>
+    <path refid="library.client-combined-3.141.59.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/client-combined-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/byte-buddy-1.8.15.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/guava-25.0-jre.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okhttp-3.11.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okio-1.14.0.jar"/>
+    <pathelement location="${path.variable.maven_repository}/junit/junit/4.12/junit-4.12.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/gson-2.8.5.jar"/>
+    <path refid="library.junit.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/apiguardian-api-1.0.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/appium-seetest-extension-12.8.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/aspectjweaver-1.8.9.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cglib-nodep-3.2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-beanutils-1.9.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-collections-3.2.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-digester-1.8.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-lang3-3.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-validator-1.5.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cssparser-0.9.18.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/gson-2.7.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/guava-19.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-core-js-2.17.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-driver-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpclient-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpcore-4.4.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpmime-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/java-client-4.1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jcommander-1.48.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-io-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-util-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-platform-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-api-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-engine-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-commons-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-engine-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/neko-htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/netty-3.5.7.Final.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/opentest4j-1.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/sac-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-api-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-chrome-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-edge-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-firefox-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-ie-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-leg-rc-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-remote-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-safari-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-support-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/serializer-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-aop-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-beans-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-context-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-core-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-expression-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/testng-6.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-api-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-client-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-common-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xalan-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xercesImpl-2.11.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xml-apis-1.4.01.jar"/>
+  </path>
+  
+  <path id="learningtestng.module.classpath">
+    <path refid="${module.jdk.classpath.learningtestng}"/>
+    <pathelement location="${learningtestng.output.dir}"/>
+    <path refid="library.client-combined-3.141.59.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/client-combined-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/byte-buddy-1.8.15.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/guava-25.0-jre.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okhttp-3.11.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okio-1.14.0.jar"/>
+    <pathelement location="${path.variable.maven_repository}/junit/junit/4.12/junit-4.12.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/gson-2.8.5.jar"/>
+    <path refid="library.junit.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/apiguardian-api-1.0.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/appium-seetest-extension-12.8.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/aspectjweaver-1.8.9.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cglib-nodep-3.2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-beanutils-1.9.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-collections-3.2.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-digester-1.8.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-lang3-3.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-validator-1.5.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cssparser-0.9.18.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/gson-2.7.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/guava-19.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-core-js-2.17.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-driver-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpclient-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpcore-4.4.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpmime-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/java-client-4.1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jcommander-1.48.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-io-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-util-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-platform-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-api-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-engine-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-commons-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-engine-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/neko-htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/netty-3.5.7.Final.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/opentest4j-1.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/sac-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-api-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-chrome-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-edge-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-firefox-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-ie-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-leg-rc-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-remote-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-safari-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-support-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/serializer-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-aop-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-beans-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-context-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-core-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-expression-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/testng-6.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-api-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-client-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-common-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xalan-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xercesImpl-2.11.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xml-apis-1.4.01.jar"/>
+  </path>
+  
+  <path id="learningtestng.runtime.module.classpath">
+    <pathelement location="${learningtestng.testoutput.dir}"/>
+    <pathelement location="${learningtestng.output.dir}"/>
+    <path refid="library.client-combined-3.141.59.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/client-combined-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/byte-buddy-1.8.15.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/guava-25.0-jre.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okhttp-3.11.0.jar"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-java-3/libs/okio-1.14.0.jar"/>
+    <pathelement location="${path.variable.maven_repository}/junit/junit/4.12/junit-4.12.jar"/>
+    <pathelement location="${path.variable.maven_repository}/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../Downloads/gson-2.8.5.jar"/>
+    <path refid="library.junit.classpath"/>
+    <pathelement location="${basedir}/../../Downloads/selenium-server-standalone-3.141.59.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/apiguardian-api-1.0.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/appium-seetest-extension-12.8.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/aspectjweaver-1.8.9.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cglib-nodep-3.2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-beanutils-1.9.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-codec-1.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-collections-3.2.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-digester-1.8.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-exec-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-io-2.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-lang3-3.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-logging-1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/commons-validator-1.5.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/cssparser-0.9.18.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/gson-2.7.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/guava-19.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/hamcrest-core-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-core-js-2.17.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/htmlunit-driver-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpclient-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpcore-4.4.4.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/httpmime-4.5.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/java-client-4.1.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jcommander-1.48.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-io-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jetty-util-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/jna-platform-4.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-4.12.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-api-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-jupiter-engine-5.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-commons-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/junit-platform-engine-1.2.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/neko-htmlunit-2.21.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/netty-3.5.7.Final.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/opentest4j-1.1.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/sac-1.3.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-api-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-chrome-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-edge-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-firefox-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-ie-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-leg-rc-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-remote-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-safari-driver-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/selenium-support-2.53.1.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/serializer-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-aop-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-beans-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-context-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-core-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/spring-expression-4.3.2.RELEASE.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/testng-6.10.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-api-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-client-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/websocket-common-9.2.15.v20160210.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xalan-2.7.2.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xercesImpl-2.11.0.jar"/>
+    <pathelement location="${basedir}/../../../../Applications/AppiumStudio/clients/appium/java/xml-apis-1.4.01.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.learningtestng">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.learningtestng">
+    <patternset refid="excluded.from.module.learningtestng"/>
+  </patternset>
+  
+  <path id="learningtestng.module.sourcepath">
+    <dirset dir="${module.learningtestng.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.learningtestng" depends="compile.module.learningtestng.production,compile.module.learningtestng.tests" description="Compile module LearningTestNG"/>
+  
+  <target name="compile.module.learningtestng.production" depends="register.custom.compilers" description="Compile module LearningTestNG; production classes">
+    <mkdir dir="${learningtestng.output.dir}"/>
+    <javac2 destdir="${learningtestng.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.learningtestng}/javac">
+      <compilerarg line="${compiler.args.learningtestng}"/>
+      <bootclasspath refid="learningtestng.module.bootclasspath"/>
+      <classpath refid="learningtestng.module.production.classpath"/>
+      <src refid="learningtestng.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.learningtestng"/>
+    </javac2>
+    
+    <copy todir="${learningtestng.output.dir}">
+      <fileset dir="${module.learningtestng.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.learningtestng.tests" depends="register.custom.compilers,compile.module.learningtestng.production" description="compile module LearningTestNG; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.learningtestng" description="cleanup module">
+    <delete dir="${learningtestng.output.dir}"/>
+    <delete dir="${learningtestng.testoutput.dir}"/>
+  </target>
+</project>

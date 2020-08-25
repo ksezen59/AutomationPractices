@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="Basic Functional Test Suite" >
+    <parameter name="email" value="automator@gmail.com"></parameter>
+
+<!--    <listeners>-->
+<!--        <listener class-name="Listeners.Listeners"></listener>-->
+<!--    </listeners>-->
+    <test name="Basic Tests" verbose="1" >
+
+<!--      <groups>-->
+<!--          <run>-->
+<!--              <include name="performance"></include>-->
+<!--              <exclude name="regression"></exclude>-->
+<!--          </run>-->
+<!--      </groups>-->
+    <classes>
+<!--      <class name="SignUpTest" />-->
+<!--      <class name="PaymentTest" />-->
+      <class name="ParallelTest.TestParallel" />
+    </classes>
+  </test>
+</suite>

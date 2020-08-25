@@ -1,0 +1,5 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+31/10/2019 14:03:08.060,3523,HTTP Request,200,OK,Thread Group 1-1,text,true,,234540,347,1,1,https://www.mynet.com/,554,0,376
+31/10/2019 14:03:08.060,554,HTTP Request-0,301,Moved permanently,Thread Group 1-1,,true,,129,113,1,1,http://mynet.com/,554,0,376
+31/10/2019 14:03:08.614,526,HTTP Request-1,301,Moved permanently,Thread Group 1-1,,true,,130,117,1,1,http://www.mynet.com/,526,0,347
+31/10/2019 14:03:09.141,2442,HTTP Request-2,200,OK,Thread Group 1-1,text,true,,234281,117,1,1,https://www.mynet.com/,925,0,749

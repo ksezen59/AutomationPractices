@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Basic Functional Test Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="email" value="automator@gmail.com"/>
+  <test name="Basic Tests(failed)">
+    <classes>
+      <class name="test.java.MockTest">
+        <methods>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- test.java.MockTest -->
+    </classes>
+  </test> <!-- Basic Tests(failed) -->
+</suite> <!-- Failed suite [Basic Functional Test Suite] -->

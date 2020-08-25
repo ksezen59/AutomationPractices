@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="google-api-java-client">
+    <ANNOTATIONS>
+      <root url="file://$USER_HOME$/Downloads/google-api-java-client" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/google-api-java-client" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/google-api-java-client" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$USER_HOME$/Downloads/google-api-java-client" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/google-api-java-client" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/google-api-java-client" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/google-api-java-client" recursive="false" type="SOURCES" />
+  </library>
+</component>

@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="junit">
+    <ANNOTATIONS>
+      <root url="file://$USER_HOME$/Downloads/apache-maven-3.6.2/maven-core/src/test/resources/org/apache/maven/extension/test-extension-repo/junit/junit" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/apache-maven-3.6.2/maven-core/src/test/resources/org/apache/maven/extension/test-extension-repo/junit/junit" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Downloads/apache-maven-3.6.2/maven-core/src/test/resources/org/apache/maven/extension/test-extension-repo/junit/junit" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://$USER_HOME$/Downloads/apache-maven-3.6.2/maven-core/src/test/resources/org/apache/maven/extension/test-extension-repo/junit/junit" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/apache-maven-3.6.2/maven-core/src/test/resources/org/apache/maven/extension/test-extension-repo/junit/junit" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/apache-maven-3.6.2/maven-core/src/test/resources/org/apache/maven/extension/test-extension-repo/junit/junit" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/apache-maven-3.6.2/maven-core/src/test/resources/org/apache/maven/extension/test-extension-repo/junit/junit" recursive="false" type="SOURCES" />
+  </library>
+</component>
