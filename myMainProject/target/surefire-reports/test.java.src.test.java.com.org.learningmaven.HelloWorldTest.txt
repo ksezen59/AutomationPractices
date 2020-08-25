@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: test.java.src.test.java.com.org.learningmaven.HelloWorldTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.813 s <<< FAILURE! - in test.java.src.test.java.com.org.learningmaven.HelloWorldTest
+loginTest(test.java.src.test.java.com.org.learningmaven.HelloWorldTest)  Time elapsed: 8.553 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Digitals-MBP-2', ip: 'fe80:0:0:0:412:8398:3c78:89b1%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.3', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 12.0.3, javascriptEnabled: true, platform: MAC, platformName: MAC, setWindowRect: true}
+Session ID: 98145929-F659-404E-83EC-2336A95FDBDE
+	at test.java.src.test.java.com.org.learningmaven.HelloWorldTest.loginTest(HelloWorldTest.java:14)
+
